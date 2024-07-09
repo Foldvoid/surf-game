@@ -1,0 +1,47 @@
+WidgetsExample:
+
+<WidgetsExample@BoxLayout>
+    size_hint: .5, 1
+    Button:
+        text: "Count"
+        size: dp(500), dp(500)
+        on_press: root.on_button_click()
+    Label:
+        text: root.my_text
+        font_name: "fonts/digital-7.ttf"
+
+
+<ScrollViewExample@ScrollView>
+    StackLayoutExample:
+        size_hint: 1, None
+        height: self.minimum_height
+
+<StackLayoutExample>
+    orientation: "lr-tb"
+
+<AnchorLayoutExample>
+    # left, center, right
+    anchor_x: "center"
+    # top, center, bottom
+    anchor_y: "top"
+    BoxLayout:
+        size_hint: 1, .2
+        Button:
+            text: "A"
+        Button:
+            text: "B"
+    BoxLayout:
+        size_hint: 1, .6
+        Button:
+            text: "C"
+        Button:
+            text: "D"
+
+
+<BoxLayoutExample>
+    Button:
+        text: "A"
+        size_hint: .5, .2
+        pos_hint: {"center_x": .5}
+    Button:
+        text: "B"
